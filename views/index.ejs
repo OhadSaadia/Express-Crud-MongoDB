@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcom to our Node.js - MongoDB CRUD app</h1>
+    <div>
+        <h2>Add A New Idium:</h2>
+        <form action="/quotes" method="post">
+            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="idium" placeholder="The idium..">
+            <button type="submit">Add</button>
+        </form>
+    </div>
+    <hr>
+    <h1>The Idiums</h1>
+    <div>
+        <ul>
+            <% for (var i=0 ; i <quotes.length; i++) { %>
+                <li>
+                    <span>
+                        <b>
+                            <%= quotes[i].name %>
+                        </b>
+                    </span>
+                    <span>
+                        <i>
+                            <%= quotes[i].idium %>
+                        </i>
+                    </span>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+     <br>
+     <div>
+         Update some quote
+         <button id="updatebtn" >Update</button>
+     </div>
+
+     <hr>
+     <h2>Delete Achav</h2>
+     <button id="deletebtn">Delete</button>
+
+     <script src="./main.js"></script>
+</body>
+</html>
