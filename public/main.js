@@ -15,16 +15,20 @@ updateBtn.addEventListener('click' , () => {
                 body: JSON.stringify(ahcavQuote)
             }        
     );
+    location.reload(true);
 });
 
 const deleteBtn = document.getElementById('deletebtn');
 
 deleteBtn.addEventListener('click' , () => {
-    let response = fetch('/quotes',
-                            {
-                                method: 'DELETE',
-                                headers: {'Content-Type' : 'application/json'},
-                                body: JSON.stringify({name:'Achav'})
-                            }          
+    fetch('/quotes',
+        {
+            method: 'DELETE',
+            headers: {'Content-Type' : 'application/json'},
+            body: JSON.stringify({name:'Achav'})
+        }          
     );
+
+    location.reload(true);
+
 });

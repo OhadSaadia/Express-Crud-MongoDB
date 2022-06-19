@@ -50,7 +50,7 @@ async function main() {
         try {
             console.log(req.body)
             await myCollection.findOneAndUpdate(
-                { name: "Achav"},
+                { name: "Annie"},
                 { $set: {
                             name: req.body.name,
                             quote: req.body.quote
